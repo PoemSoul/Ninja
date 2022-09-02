@@ -79,8 +79,8 @@ router.post('/api/cklogin', body(), async (ctx) => {
 });
 
 router.get('/api/userinfo', async (ctx) => {
-  const query = ctx.request.query;
-  const eid = query.eid;
+  const query = ctx.query;
+  const eid = Number(query.eid);
   const user = new User({ eid });
   const data = await user.getUserInfoByEid();
   ctx.body = { data };

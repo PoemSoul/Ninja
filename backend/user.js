@@ -9,7 +9,7 @@ const QRCode = require('qrcode');
 const { addEnv, delEnv, getEnvs, getEnvsCount, updateEnv , addWSCKEnv, delWSCKEnv, getWSCKEnvs, getWSCKEnvsCount, updateWSCKEnv } = require('./ql');
 const path = require('path');
 const qlDir = process.env.QL_DIR || '/ql';
-const notifyFile = path.join(qlDir, 'shell/notify.sh');
+const notifyFile = path.join(qlDir, 'data/scripts/notify.py');
 const { exec } = require('child_process');
 const { GET_RANDOM_TIME_UA } = require('./utils/USER_AGENT');
 
