@@ -148,7 +148,7 @@ module.exports.updateWSCKEnv = async (jdwsck, wseid, remarks) => {
     json: {
       name: 'JD_WSCK',
       value: jdwsck,
-      _id: wseid,
+      id: wseid,
       remarks,
     },
     headers: {
