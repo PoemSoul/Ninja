@@ -238,7 +238,7 @@ module.exports = class User {
       throw new UserError('没有找到这个账户，重新登录试试看哦', 230, 200);
     }
     this.cookie = env.value;
-    this.timestamp = env.timestamp;
+    this.timestamp = env.updatedAt;
     const remarks = env.remarks;
     if (remarks) {
       this.remark = remarks.match(/remark=(.*?);/) && remarks.match(/remark=(.*?);/)[1];
